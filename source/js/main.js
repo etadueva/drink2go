@@ -1,27 +1,26 @@
-import { openTheMenu } from "./toggle-menu.js";
+import { openTheMenu } from './toggle-menu.js';
+import Swiper from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+const promoSlider = document.querySelector('.swiper');
+const swiperPagination = document.querySelector('.swiper__pagination')
+const swiperButtonPrev = document.querySelector('.swiper__button--prev');
+const swiperButtonNext = document.querySelector('.swiper__button--next');
+
+const swiper = new Swiper(promoSlider, {
+  direction: 'vertical',
+  loop: true,
+
+  pagination: {
+    el: swiperPagination,
+  },
+
+  navigation: {
+    nextEl: swiperButtonNext,
+    prevEl: swiperButtonPrev,
+  }
+});
 
 openTheMenu();
-
-// const slider = document.querySelector('.swiper');
-// const sliderPagination = document.querySelector('.swiper__pagination');
-// const sliderButtonNext = document.querySelector('.swiper-button-next');
-// const sliderButtonPrev = document.querySelector('.swiper-button-prev');
-
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-
-// const swiper = new Swiper(slider, {
-//   direction: 'vertical',
-//   loop: true,
-
-//   pagination: {
-//     el: sliderPagination,
-//   },
-
-//   navigation: {
-//     nextEl: sliderButtonNext,
-//     prevEl: sliderButtonPrev,
-//   },
-// });

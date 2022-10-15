@@ -41,6 +41,6 @@
   },
   "type": "module",
   "dependencies": {
-    "swiper": "^8.4.3"
+    "swiper": "^8.4.4"
   }
 }

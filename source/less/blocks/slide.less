@@ -1,8 +1,44 @@
 .slide {
   font-family: "Montserrat", "Arial", sans-serif;
-      text-transform: uppercase;
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 16px;
-      letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  line-height: 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &__picture {
+    margin-top: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__image {
+      width: 476px;
+      height: 476px;
+    }
+    &__description {
+      order: -1;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: center;
+    text-align: start;
+    &__picture {
+      margin-top: 30px;
+    }
+    &__image {
+      width: 600px;
+      height: 600px;
+    }
+    &__description {
+      order: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
 }
