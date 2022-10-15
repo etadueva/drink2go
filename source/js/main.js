@@ -1,26 +1,22 @@
 import { openTheMenu } from './toggle-menu.js';
-import Swiper from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
-const promoSlider = document.querySelector('.swiper');
-const swiperPagination = document.querySelector('.swiper__pagination')
-const swiperButtonPrev = document.querySelector('.swiper__button--prev');
-const swiperButtonNext = document.querySelector('.swiper__button--next');
+import Swiper, { Navigation, Pagination } from 'swiper';
 
-const swiper = new Swiper(promoSlider, {
-  direction: 'vertical',
+// Swiper.use([Navigation, Pagination]);
+import 'swiper/css/bundle';
+
+new Swiper('.swiper', {
+  modules: [Navigation, Pagination],
   loop: true,
 
   pagination: {
-    el: swiperPagination,
+    el: '.swiper-pagination',
   },
 
   navigation: {
-    nextEl: swiperButtonNext,
-    prevEl: swiperButtonPrev,
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   }
 });
 
-openTheMenu();
+  openTheMenu();
