@@ -1,12 +1,10 @@
 import { openTheMenu } from './toggle-menu.js';
 
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from '../../node_modules/swiper/swiper-bundle';
 
-// Swiper.use([Navigation, Pagination]);
-import 'swiper/css/bundle';
-
-new Swiper('.swiper', {
-  modules: [Navigation, Pagination],
+swiper.use([Navigation, Pagination]);
+const swiper = new Swiper('.swiper', {
+  // modules: [Navigation, Pagination],
   loop: true,
 
   pagination: {
