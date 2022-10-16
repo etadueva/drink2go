@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preload" href="/fonts/montserrat-thin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preload" href="/fonts/montserrat-thin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
     <title>Дринк ту гоу</title>
   </head>
+
   <body class="page__body">
     <header class="main-header">
       <div class="main-header__wrapper page-container">
@@ -21,9 +22,9 @@
         <a class="main-header__link link-logo" href="#" id="logo-header">
           <h2 class="visually-hidden">Ссылка-логотип</h2>
           <picture>
-            <source media="(min-width: 1440px)" srcset="./img/logo/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="./img/logo/logo-tablet.svg">
-            <img class="link-logo__image logo" src="./img/logo/logo-mobile.svg" width="32" height="36" alt="Логотип дринк ту гоу.">
+            <source media="(min-width: 1440px)" srcset="./img/logo/logo-desktop.svg" />
+            <source media="(min-width: 768px)" srcset="./img/logo/logo-tablet.svg" />
+            <img class="link-logo__image logo" src="./img/logo/logo-mobile.svg" width="32" height="36" alt="Логотип дринк ту гоу." />
           </picture>
         </a>
         <div class="main-header__toggle">
@@ -45,14 +46,24 @@
         <div class="main-header__buttons main-header__buttons--nojs">
           <button class="main-header__button button-nav" type="button">
             <svg class="button-nav__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 4C10.6667 5.47276 9.47276 6.66667 8 6.66667C6.52724 6.66667 5.33333 5.47276 5.33333 4C5.33333 2.52724 6.52724 1.33333 8 1.33333C9.47276 1.33333 10.6667 2.52724 10.6667 4ZM12 4C12 6.20914 10.2091 8 8 8C5.79086 8 4 6.20914 4 4C4 1.79086 5.79086 0 8 0C10.2091 0 12 1.79086 12 4ZM3.19673 12.3102C4.43611 11.2774 6.1613 10.6667 8 10.6667C9.8387 10.6667 11.5639 11.2774 12.8033 12.3102C14.0354 13.337 14.6667 14.6719 14.6667 16H16C16 14.2321 15.1573 12.5363 13.6569 11.286C12.1566 10.0357 10.1218 9.33333 8 9.33333C5.87821 9.33333 3.8434 10.0357 2.34315 11.286C0.842686 12.5363 0 14.2321 0 16L1.33333 16C1.33333 14.6719 1.96465 13.337 3.19673 12.3102Z" fill="#333333"/>
-            </svg>            
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.6667 4C10.6667 5.47276 9.47276 6.66667 8 6.66667C6.52724 6.66667 5.33333 5.47276 5.33333 4C5.33333 2.52724 6.52724 1.33333 8 1.33333C9.47276 1.33333 10.6667 2.52724 10.6667 4ZM12 4C12 6.20914 10.2091 8 8 8C5.79086 8 4 6.20914 4 4C4 1.79086 5.79086 0 8 0C10.2091 0 12 1.79086 12 4ZM3.19673 12.3102C4.43611 11.2774 6.1613 10.6667 8 10.6667C9.8387 10.6667 11.5639 11.2774 12.8033 12.3102C14.0354 13.337 14.6667 14.6719 14.6667 16H16C16 14.2321 15.1573 12.5363 13.6569 11.286C12.1566 10.0357 10.1218 9.33333 8 9.33333C5.87821 9.33333 3.8434 10.0357 2.34315 11.286C0.842686 12.5363 0 14.2321 0 16L1.33333 16C1.33333 14.6719 1.96465 13.337 3.19673 12.3102Z"
+                fill="#333333"
+              />
+            </svg>
             <span class="button-nav__description">Войти</span>
           </button>
           <button class="main-header__button button-nav button-nav--basket" type="button">
             <svg class="button-nav__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.66091 3.87546L5.89351 6.66667H10.1065L10.3391 3.87546C10.4531 2.50699 9.37321 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546ZM11.4444 6.66667L11.6678 3.98618C11.8466 1.84036 10.1533 0 8 0C5.84674 0 4.15336 1.84036 4.33218 3.98618L4.55556 6.66667H1.34687H0L0.190476 8L1.00626 13.7105C1.19393 15.0242 2.31905 16 3.64612 16H12.3539C13.6809 16 14.8061 15.0242 14.9937 13.7105L15.8095 8L16 6.66667H14.6531H11.4444ZM11.3333 8H11.2801L11.0579 10.6667H14.0817L14.4627 8H11.3333ZM9.94213 8H6.05787L6.28009 10.6667H9.71991L9.94213 8ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM10.9468 12L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219L13.8912 12H10.9468ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324Z" fill="#333333"/>
-            </svg>                        
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.66091 3.87546L5.89351 6.66667H10.1065L10.3391 3.87546C10.4531 2.50699 9.37321 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546ZM11.4444 6.66667L11.6678 3.98618C11.8466 1.84036 10.1533 0 8 0C5.84674 0 4.15336 1.84036 4.33218 3.98618L4.55556 6.66667H1.34687H0L0.190476 8L1.00626 13.7105C1.19393 15.0242 2.31905 16 3.64612 16H12.3539C13.6809 16 14.8061 15.0242 14.9937 13.7105L15.8095 8L16 6.66667H14.6531H11.4444ZM11.3333 8H11.2801L11.0579 10.6667H14.0817L14.4627 8H11.3333ZM9.94213 8H6.05787L6.28009 10.6667H9.71991L9.94213 8ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM10.9468 12L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219L13.8912 12H10.9468ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324Z"
+                fill="#333333"
+              />
+            </svg>
             <span class="button-nav__description">Корзина</span>
           </button>
           <button class="main-header__button button-nav button-nav--open-menu"></button>
@@ -67,9 +78,9 @@
               <div class="swiper__slide swiper-slide swiper-slide--one">
                 <div class="swiper-slide__picture">
                   <picture>
-                    <source media="(min-width: 1440px)" srcset="./img/promo-img/flat-white-desktop.png">
-                    <source media="(min-width: 768px)" srcset="./img/promo-img/flat-white-tablet.png">
-                    <img class="swiper-slide__image" src="./img/promo-img/flat-white-mobile.png" width="280" height="280" alt="Фото флэт вайт.">
+                    <source media="(min-width: 1440px)" srcset="./img/promo-img/flat-white-desktop.png" />
+                    <source media="(min-width: 768px)" srcset="./img/promo-img/flat-white-tablet.png" />
+                    <img class="swiper-slide__image" src="./img/promo-img/flat-white-mobile.png" width="280" height="280" alt="Фото флэт вайт." />
                   </picture>
                 </div>
                 <div class="swiper-slide__description slide-description">
@@ -78,7 +89,7 @@
                   <p class="slide-description__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
                   <div class="slide-description__block block-slide">
                     <div class="block-slide__price price">
-                      <del class="price__old">295&#8381;</del>
+                      <del class="price__old">295&#8381;</del> 
                       <span class="price__new">225&#8381;</span>
                     </div>
                     <button class="block-slide__button button">Заказать</button>
@@ -88,9 +99,9 @@
               <div class="swiper__slide swiper-slide swiper-slide--two">
                 <div class="swiper-slide__picture">
                   <picture>
-                    <source media="(min-width: 1440px)" srcset="./img/promo-img/lavender-desktop.png">
-                    <source media="(min-width: 768px)" srcset="./img/promo-img/lavender-tablet.png">
-                    <img class="swiper-slide__image" src="./img/promo-img/lavender-mobile.png" width="280" height="280" alt="Фото лавандер латтэ.">
+                    <source media="(min-width: 1440px)" srcset="./img/promo-img/lavender-desktop.png" />
+                    <source media="(min-width: 768px)" srcset="./img/promo-img/lavender-tablet.png" />
+                    <img class="swiper-slide__image" src="./img/promo-img/lavender-mobile.png" width="280" height="280" alt="Фото лавандер латтэ." />
                   </picture>
                 </div>
                 <div class="swiper-slide__description slide-description">
@@ -99,7 +110,7 @@
                   <p class="slide-description__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
                   <div class="slide-description__block block-slide">
                     <div class="block-slide__price price">
-                      <del class="price__old">295&#8381;</del>
+                      <del class="price__old">295&#8381;</del> 
                       <span class="price__new">225&#8381;</span>
                     </div>
                     <button class="block-slide__button button">Заказать</button>
@@ -109,9 +120,9 @@
               <div class="swiper__slide swiper-slide swiper-slide--three">
                 <div class="swiper-slide__picture">
                   <picture>
-                    <source media="(min-width: 1440px)" srcset="./img/promo-img/espresso-desktop.png">
-                    <source media="(min-width: 768px)" srcset="./img/promo-img/espresso-tablet.png">
-                    <img class="swiper-slide__image" src="./img/promo-img/espresso-mobile.png" width="280" height="280" alt="Фото трипл эспрессо.">
+                    <source media="(min-width: 1440px)" srcset="./img/promo-img/espresso-desktop.png" />
+                    <source media="(min-width: 768px)" srcset="./img/promo-img/espresso-tablet.png" />
+                    <img class="swiper-slide__image" src="./img/promo-img/espresso-mobile.png" width="280" height="280" alt="Фото трипл эспрессо." />
                   </picture>
                 </div>
                 <div class="swiper-slide__description slide-description">
@@ -120,7 +131,7 @@
                   <p class="slide-description__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
                   <div class="slide-description__block block-slide">
                     <div class="block-slide__price price">
-                      <del class="price__old">295&#8381;</del>
+                      <del class="price__old">295&#8381;</del> 
                       <span class="price__new">225&#8381;</span>
                     </div>
                     <button class="block-slide__button button">Заказать</button>
@@ -128,10 +139,8 @@
                 </div>
               </div>
             </div>
-            <button class="swiper__button swiper-button-prev swiper__button--prev"></button>
-            <button class="swiper__button swiper-button-next swiper__button--next"></button>
-            <div class="swiper__pagination swiper-pagination">
-            </div>
+            <button class="swiper__button swiper-button-prev swiper__button--prev"></button> <button class="swiper__button swiper-button-next swiper__button--next"></button>
+            <div class="swiper__pagination swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -141,28 +150,28 @@
           <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantage">
-              <img class="advantage__icon" src="./img/icon-clock.svg" width="52" height="56" alt="Иконка часы.">
+              <img class="advantage__icon" src="./img/icon-clock.svg" width="52" height="56" alt="Иконка часы." />
               <div class="advantage__text">
                 <h3 class="advantage__title">Скорость</h3>
                 <p class="advantage__description">Готовый напиток всегда под рукой — просто открой банку</p>
-              </div>  
+              </div>
             </li>
             <li class="advantages__item advantage">
-              <img class="advantage__icon" src="./img/icon-pocket.svg" width="52" height="56" alt="Иконка карман.">
+              <img class="advantage__icon" src="./img/icon-pocket.svg" width="52" height="56" alt="Иконка карман." />
               <div class="advantage__text">
                 <h3 class="advantage__title">Удобство</h3>
                 <p class="advantage__description">Легко помещается и в карман, и в маленькую сумочку</p>
               </div>
             </li>
             <li class="advantages__item advantage">
-              <img class="advantage__icon" src="./img/icon-lightning.svg" width="52" height="56" alt="Иконка молния.">
+              <img class="advantage__icon" src="./img/icon-lightning.svg" width="52" height="56" alt="Иконка молния." />
               <div class="advantage__text">
                 <h3 class="advantage__title">Бодрость</h3>
                 <p class="advantage__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
               </div>
             </li>
             <li class="advantages__item advantage">
-              <img class="advantage__icon" src="./img/icon-leaf.svg" width="52" height="56" alt="Иконка листок.">
+              <img class="advantage__icon" src="./img/icon-leaf.svg" width="52" height="56" alt="Иконка листок." />
               <div class="advantage__text">
                 <h3 class="advantage__title">Экологичность</h3>
                 <p class="advantage__description">Вся упаковка сделана из перерабатываемых материалов</p>
@@ -192,11 +201,10 @@
                   </div>
                   <div class="price-filter__inputs">
                     <label class="price-filter__label" for="min-price">
-                      <input class="price-filter__input price-filter__input--min" type="number" id="min-price" min="0" value="0">
-                    </label>
-                    <span class="price-filter__dash">-</span>
+                      <input class="price-filter__input price-filter__input--min" type="number" id="min-price" min="0" value="0" /></label>
+                      <span class="price-filter__dash">-</span>
                     <label class="price-filter__label" for="max-price">
-                      <input class="price-filter__input price-filter__input--max" type="number" id="max-price" max="1000" value="900">
+                      <input class="price-filter__input price-filter__input--max" type="number" id="max-price" max="1000" value="900" />
                     </label>
                   </div>
                 </fieldset>
@@ -205,29 +213,29 @@
                   <ul class="filter-milk__list">
                     <li class="filter-milk__item">
                       <label class="filter-milk__control control" for="any">
-                        <input class="control__input" type="radio" id="any" name="milk" value="Неважно" checked>
-                        <span class="control__mark"></span>
+                        <input class="control__input" type="radio" id="any" name="milk" value="Неважно" checked="checked" /> 
+                        <span class="control__mark"></span> 
                         <span class="control__title">Неважно</span>
                       </label>
                     </li>
                     <li class="filter-milk__item">
                       <label class="filter-milk__control control" for="animal">
-                        <input class="control__input" type="radio" id="animal" name="milk" value="Только животное">
-                        <span class="control__mark"></span>
+                        <input class="control__input" type="radio" id="animal" name="milk" value="Только животное" /> 
+                        <span class="control__mark"></span> 
                         <span class="control__title">Только животное</span>
                       </label>
                     </li>
                     <li class="filter-milk__item">
                       <label class="filter-milk__control control" for="vegetable">
-                        <input class="control__input" type="radio" id="vegetable" name="milk" value="Только растительное">
-                        <span class="control__mark"></span>
+                        <input class="control__input" type="radio" id="vegetable" name="milk" value="Только растительное" /> 
+                        <span class="control__mark"></span> 
                         <span class="control__title">Только растительное</span>
                       </label>
                     </li>
                     <li class="filter-milk__item">
                       <label class="filter-milk__control control" for="without-milk">
-                        <input class="control__input" type="radio" id="without-milk" name="milk" value="Без молока">
-                        <span class="control__mark"></span>
+                        <input class="control__input" type="radio" id="without-milk" name="milk" value="Без молока" /> 
+                        <span class="control__mark"></span> 
                         <span class="control__title">Без молока</span>
                       </label>
                     </li>
@@ -236,45 +244,42 @@
                 <fieldset class="form-filters__item country-filter">
                   <legend class="country-filter__title title-form">Страна произрастания</legend>
                   <ul class="country-filter__list">
-                    <li class="country-filter__item ">
+                    <li class="country-filter__item">
                       <label class="country-filter__control control-country" for="brazil">
-                        <input class="control-country__input" type="checkbox" id="brazil" checked>
-                        <span class="control-country__mark"></span>
+                        <input class="control-country__input" type="checkbox" id="brazil" checked="checked" /> 
+                        <span class="control-country__mark"></span> 
                         <span class="control-country__title">Бразилия</span>
                       </label>
                     </li>
-                    <li class="country-filter__item ">
+                    <li class="country-filter__item">
                       <label class="country-filter__control control-country" for="ethiopia">
-                        <input class="control-country__input" type="checkbox" id="ethiopia">
-                        <span class="control-country__mark"></span>
+                        <input class="control-country__input" type="checkbox" id="ethiopia" /> 
+                        <span class="control-country__mark"></span> 
                         <span class="control-country__title">Эфиопия</span>
                       </label>
                     </li>
-                    <li class="country-filter__item ">
+                    <li class="country-filter__item">
                       <label class="country-filter__control control-country" for="colombia">
-                        <input class="control-country__input" type="checkbox" id="colombia">
-                        <span class="control-country__mark"></span>
-                        <span class="control-country__title">Колумбия</span>
+                        <input class="control-country__input" type="checkbox" id="colombia" /> <span class="control-country__mark"></span> <span class="control-country__title">Колумбия</span>
                       </label>
                     </li>
-                    <li class="country-filter__item ">
+                    <li class="country-filter__item">
                       <label class="country-filter__control control-country" for="costa-rica">
-                        <input class="control-country__input" type="checkbox" id="costa-rica">
-                        <span class="control-country__mark"></span>
+                        <input class="control-country__input" type="checkbox" id="costa-rica" /> 
+                        <span class="control-country__mark"></span> 
                         <span class="control-country__title">Коста-Рика</span>
                       </label>
                     </li>
-                    <li class="country-filter__item ">
+                    <li class="country-filter__item">
                       <label class="country-filter__control control-country" for="peru">
-                        <input class="control-country__input" type="checkbox" id="peru">
-                        <span class="control-country__mark"></span>
+                        <input class="control-country__input" type="checkbox" id="peru" /> <span class="control-country__mark"></span> 
                         <span class="control-country__title">Перу</span>
                       </label>
                     </li>
                   </ul>
                 </fieldset>
                 <div class="form-filters__buttons buttons-form">
-                  <button class="buttons-form__submit button" type="submit">Применить фильтр</button>
+                  <button class="buttons-form__submit button" type="submit">Применить фильтр</button> 
                   <button class="buttons-form__reset button-light" type="reset">Сбросить фильтр</button>
                 </div>
               </form>
@@ -293,8 +298,8 @@
                 <li class="catalog__item item">
                   <a class="item__link" href="#">
                     <picture>
-                      <source media="(min-width: 320px)" srcset="./img/catalog/item-1.webp, ./img/catalog/item-1@2x.webp 2x">
-                      <img class="item__image" src="./img/catalog/item-1.png" srcset="./img/catalog/item-1@2x.png" width="130" height="188" alt="фото спешиалти коффи">
+                      <source media="(min-width: 320px)" srcset="./img/catalog/item-1.webp, ./img/catalog/item-1@2x.webp 2x" />
+                      <img class="item__image" src="./img/catalog/item-1.png" srcset="./img/catalog/item-1@2x.png" width="130" height="188" alt="фото спешиалти коффи" />
                     </picture>
                   </a>
                   <a class="item__link" href="#">
@@ -303,8 +308,7 @@
                   <p class="item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <div class="item__block">
                     <span class="item__price">225&#8381;</span>
-                    <button class="item__button button">
-                      <img class="button__icon" src="./img/icon-basket.svg" width="20" height="16" alt="Иконка корзина.">
+                    <button class="item__button button"><img class="button__icon" src="./img/icon-basket.svg" width="20" height="16" alt="Иконка корзина." /> 
                       <span class="button__text">В корзину</span>
                     </button>
                   </div>
@@ -312,8 +316,8 @@
                 <li class="catalog__item item">
                   <a class="item__link" href="#">
                     <picture>
-                      <source media="(min-width: 320px)" srcset="./img/catalog/item-2.webp, ./img/catalog/item-2@2x.webp 2x">
-                      <img class="item__image" src="./img/catalog/item-2.png" srcset="./img/catalog/item-2@2x.png" width="130" height="188" alt="фото спешиалти коффи">
+                      <source media="(min-width: 320px)" srcset="./img/catalog/item-2.webp, ./img/catalog/item-2@2x.webp 2x" />
+                      <img class="item__image" src="./img/catalog/item-2.png" srcset="./img/catalog/item-2@2x.png" width="130" height="188" alt="фото спешиалти коффи" />
                     </picture>
                   </a>
                   <a class="item__link" href="#">
@@ -322,8 +326,7 @@
                   <p class="item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <div class="item__block">
                     <span class="item__price">225&#8381;</span>
-                    <button class="item__button button">
-                      <img class="button__icon" src="./img/icon-basket.svg" width="20" height="16" alt="Иконка корзина.">
+                    <button class="item__button button"><img class="button__icon" src="./img/icon-basket.svg" width="20" height="16" alt="Иконка корзина." />
                       <span class="button__text">В корзину</span>
                     </button>
                   </div>
@@ -331,8 +334,8 @@
                 <li class="catalog__item item">
                   <a class="item__link" href="#">
                     <picture>
-                      <source media="(min-width: 320px)" srcset="./img/catalog/item-3.webp, ./img/catalog/item-3@2x.webp 2x">
-                      <img class="item__image" src="./img/catalog/item-3.png" srcset="./img/catalog/item-3@2x.png" width="130" height="188" alt="фото спешиалти коффи">
+                      <source media="(min-width: 320px)" srcset="./img/catalog/item-3.webp, ./img/catalog/item-3@2x.webp 2x" />
+                      <img class="item__image" src="./img/catalog/item-3.png" srcset="./img/catalog/item-3@2x.png" width="130" height="188" alt="фото спешиалти коффи" />
                     </picture>
                   </a>
                   <a class="item__link" href="#">
@@ -342,7 +345,7 @@
                   <div class="item__block">
                     <span class="item__price">225&#8381;</span>
                     <button class="item__button button">
-                      <img class="button__icon" src="./img/icon-basket.svg" width="20" height="16" alt="Иконка корзина.">
+                      <img class="button__icon" src="./img/icon-basket.svg" width="20" height="16" alt="Иконка корзина." /> 
                       <span class="button__text">В корзину</span>
                     </button>
                   </div>
@@ -350,8 +353,8 @@
                 <li class="catalog__item item">
                   <a class="item__link" href="#">
                     <picture>
-                      <source media="(min-width: 320px)" srcset="./img/catalog/item-4.webp, ./img/catalog/item-4@2x.webp 2x">
-                      <img class="item__image" src="./img/catalog/item-4.png" srcset="./img/catalog/item-4@2x.png" width="130" height="188" alt="фото спешиалти коффи">
+                      <source media="(min-width: 320px)" srcset="./img/catalog/item-4.webp, ./img/catalog/item-4@2x.webp 2x" />
+                      <img class="item__image" src="./img/catalog/item-4.png" srcset="./img/catalog/item-4@2x.png" width="130" height="188" alt="фото спешиалти коффи" />
                     </picture>
                   </a>
                   <a class="item__link" href="#">
@@ -361,7 +364,7 @@
                   <div class="item__block">
                     <span class="item__price">225&#8381;</span>
                     <button class="item__button button">
-                      <img class="button__icon" src="./img/icon-basket.svg" width="20" height="16" alt="Иконка корзина.">
+                      <img class="button__icon" src="./img/icon-basket.svg" width="20" height="16" alt="Иконка корзина." /> 
                       <span class="button__text">В корзину</span>
                     </button>
                   </div>
@@ -369,8 +372,8 @@
                 <li class="catalog__item item">
                   <a class="item__link" href="#">
                     <picture>
-                      <source media="(min-width: 320px)" srcset="./img/catalog/item-5.webp, ./img/catalog/item-5@2x.webp 2x">
-                      <img class="item__image" src="./img/catalog/item-5.png" srcset="./img/catalog/item-5@2x.png" width="130" height="188" alt="фото спешиалти коффи">
+                      <source media="(min-width: 320px)" srcset="./img/catalog/item-5.webp, ./img/catalog/item-5@2x.webp 2x" />
+                      <img class="item__image" src="./img/catalog/item-5.png" srcset="./img/catalog/item-5@2x.png" width="130" height="188" alt="фото спешиалти коффи" />
                     </picture>
                   </a>
                   <a class="item__link" href="#">
@@ -380,7 +383,7 @@
                   <div class="item__block">
                     <span class="item__price">225&#8381;</span>
                     <button class="item__button button">
-                      <img class="button__icon" src="./img/icon-basket.svg" width="20" height="16" alt="Иконка корзина.">
+                      <img class="button__icon" src="./img/icon-basket.svg" width="20" height="16" alt="Иконка корзина." /> 
                       <span class="button__text">В корзину</span>
                     </button>
                   </div>
@@ -388,8 +391,8 @@
                 <li class="catalog__item item">
                   <a class="item__link" href="#">
                     <picture>
-                      <source media="(min-width: 320px)" srcset="./img/catalog/item-6.webp, ./img/catalog/item-6@2x.webp 2x">
-                      <img class="item__image" src="./img/catalog/item-6.png" srcset="./img/catalog/item-6@2x.png" width="130" height="188" alt="фото спешиалти коффи">
+                      <source media="(min-width: 320px)" srcset="./img/catalog/item-6.webp, ./img/catalog/item-6@2x.webp 2x" />
+                      <img class="item__image" src="./img/catalog/item-6.png" srcset="./img/catalog/item-6@2x.png" width="130" height="188" alt="фото спешиалти коффи" />
                     </picture>
                   </a>
                   <a class="item__link" href="#">
@@ -399,7 +402,7 @@
                   <div class="item__block">
                     <span class="item__price">225&#8381;</span>
                     <button class="item__button button">
-                      <img class="button__icon" src="./img/icon-basket.svg" width="20" height="16" alt="Иконка корзина.">
+                      <img class="button__icon" src="./img/icon-basket.svg" width="20" height="16" alt="Иконка корзина." /> 
                       <span class="button__text">В корзину</span>
                     </button>
                   </div>
@@ -407,7 +410,7 @@
               </ul>
               <div class="catalog__pagination pagination-product">
                 <button class="pagination-product__button button-pagination button-pagination--back">
-                  <img class="button-pagination__icon button-pagination__icon--back" src="./img/back.svg" alt="Стрелка назад.">
+                  <img class="button-pagination__icon button-pagination__icon--back" src="./img/back.svg" alt="Стрелка назад." /> 
                   <span class="button-pagination__text button-pagination__text--back">Назад</span>
                 </button>
                 <button class="pagination-product__button button-pagination button-pagination--figure">
@@ -420,7 +423,7 @@
                   <span class="button-pagination__text">3</span>
                 </button>
                 <button class="pagination-product__button button-pagination button-pagination--next">
-                  <img class="button-pagination__icon button-pagination__icon--next" src="./img/next.svg" alt="Стрелка вперед.">
+                  <img class="button-pagination__icon button-pagination__icon--next" src="./img/next.svg" alt="Стрелка вперед." /> 
                   <span class="button-pagination__text button-pagination__text--next">Вперед</span>
                 </button>
               </div>
@@ -439,26 +442,22 @@
           <h2 class="visually-hidden">Логотип</h2>
           <a class="footer-container__link link-logo-footer" href="#logo-header">
             <picture>
-              <source media="(min-width: 768px)" srcset="./img/logo/logo-footer-tablet.svg">
-              <img class="link-logo-footer__image logo" src="./img/logo/logo-footer-mobile.svg" width="82" height="36" alt="Логотип дринк ту гоу.">
+              <source media="(min-width: 768px)" srcset="./img/logo/logo-footer-tablet.svg" />
+              <img class="link-logo-footer__image logo" src="./img/logo/logo-footer-mobile.svg" width="82" height="36" alt="Логотип дринк ту гоу." />
             </picture>
           </a>
           <div class="footer-container__social social-network">
             <ul class="social-network__list">
               <li class="social-network__item">
                 <a class="social-network__link" href="#">
-                  <img src="./img/vk.svg" alt="Иконка вконтакте.">
+                  <img src="./img/vk.svg" alt="Иконка вконтакте." />
                 </a>
               </li>
               <li class="social-network__item">
-                <a class="social-network__link" href="#">
-                  <img src="./img/pinterest.svg" alt="Иконка пинтерест.">
-                </a>
+                <a class="social-network__link" href="#"><img src="./img/pinterest.svg" alt="Иконка пинтерест." /></a>
               </li>
               <li class="social-network__item">
-                <a class="social-network__link" href="#">
-                  <img src="./img/ok.svg" alt="Иконка одноклассники.">
-                </a>
+                <a class="social-network__link" href="#"><img src="./img/ok.svg" alt="Иконка одноклассники." /></a>
               </li>
             </ul>
           </div>
@@ -467,7 +466,7 @@
           <h3 class="navigation-footer__title">Интернет-магазин</h3>
           <ul class="navigation-footer__list">
             <li class="navigation-footer__item">
-              <a  class="navigation-footer__link" href="#catalog">Каталог</a>
+              <a class="navigation-footer__link" href="#catalog">Каталог</a>
             </li>
             <li class="navigation-footer__item">
               <a class="navigation-footer__link" href="" id="delivery">Доставка</a>
@@ -497,18 +496,18 @@
         <div class="footer-container__block contacts">
           <h3 class="contacts__title">Контакты</h3>
           <div class="contacts__address address">
-            <img class="address__icon" src="./img/address.svg" alt="Иконка маркер.">
+            <img class="address__icon" src="./img/address.svg" alt="Иконка маркер." /> 
             <span class="address__tetx">Санкт-Петербург, набережная реки Карповки, дом 5</span>
           </div>
           <div class="contacts__phone phone">
-            <img class="phone__icon" src="./img/phone.svg" alt="Иконка телефон.">
+            <img class="phone__icon" src="./img/phone.svg" alt="Иконка телефон." /> 
             <span class="phone__tetx">+7 (999) 999-99-99</span>
           </div>
         </div>
         <div class="footer-contsiner__block html-academy">
           <a class="html-academy__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="html-academy__text">Разработано в HTML Academy</span>
-            <img class="html-academy__img" src="./img/logo-html-academy.svg">
+            <span class="html-academy__text">Разработано в HTML Academy</span> 
+            <img class="html-academy__img" src="./img/logo-html-academy.svg" />
           </a>
         </div>
       </div>
