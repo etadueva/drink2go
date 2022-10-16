@@ -1,0 +1,64 @@
+.advantage {
+  text-align: center;
+  margin-bottom: 32px;
+
+  &__title {
+    display: block;
+    margin-top: 4px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  &__description {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    margin-bottom: 0;
+
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+      margin: 0;
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    text-align: center;
+
+    &__icon {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__title {
+      margin-top: 20px;
+    }
+
+    &__description {
+      margin-top: 10px;
+    }
+  }
+}
+
+.advantage:last-child {
+  margin-bottom: 60px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}

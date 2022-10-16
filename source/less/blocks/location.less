@@ -1,0 +1,38 @@
+.location {
+  &__map {
+    height: 420px;
+    background-color: @color-background-map;
+    background-image: url("/img/location-background/location-mobile.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/location-background/location-mobile@2x.jpg");
+    }
+
+    @media (min-width: @tablet-width) {
+      height: 480px;
+      background-image: url("/img/location-background/location-tablet.jpg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("/img/location-background/location-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 540px;
+      background-image: url("/img/location-background/location-desktop.jpg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("/img/location-background/location-desktop@2x.jpg");
+      }
+    }
+  }
+}

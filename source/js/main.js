@@ -1,14 +1,9 @@
 import { openTheMenu } from './toggle-menu.js';
 
-import Swiper, { Navigation, Pagination } from '../../node_modules/swiper/swiper-bundle';
-
-swiper.use([Navigation, Pagination]);
 const swiper = new Swiper('.swiper', {
-  // modules: [Navigation, Pagination],
-  loop: true,
-
   pagination: {
     el: '.swiper-pagination',
+    clickable: true
   },
 
   navigation: {
@@ -17,4 +12,13 @@ const swiper = new Swiper('.swiper', {
   }
 });
 
-  openTheMenu();
+const map = L.map('map').setView([59.968137, 30.316272], 16);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([59.968137, 30.316272]).addTo(map)
+  .openPopup();
+
+openTheMenu();

@@ -1,14 +1,27 @@
 .swiper {
-  width: 320px;
+  width: 100%;
   height: 680px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
     height: 828px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
     height: 714px;
+  }
+
+  &__pagination {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  &__button {
+    color: @color-primary;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    width: 20px;
   }
 }

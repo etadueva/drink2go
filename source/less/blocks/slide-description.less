@@ -1,7 +1,6 @@
 .slide-description {
   &__new {
     display: block;
-    margin-top: 10px;
   }
 
   &__heading {
@@ -12,6 +11,9 @@
     margin-top: 4px;
     text-transform: none;
     font-weight: 700;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__text {
@@ -22,6 +24,9 @@
     text-transform: none;
     font-weight: 400;
     letter-spacing: 0;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__block {
@@ -41,6 +46,7 @@
       font-size: 56px;
       line-height: 80px;
       margin-bottom: 0;
+      max-width: 728px;
     }
 
     &__text {
@@ -52,13 +58,23 @@
       font-weight: 400;
       font-size: 20px;
       line-height: 32px;
+      width: 728px;
     }
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: 30px;
     &__block {
       justify-content: start;
       margin-top: 40px;
+    }
+
+    &__text {
+      width: 625px;
+    }
+
+    &__new {
+      margin-top: 0;
     }
   }
 }

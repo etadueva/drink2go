@@ -1,0 +1,49 @@
+.catalog {
+  font-family: "Montserrat", "Arial", sans-serif;
+  background-color: @color-gray-catalog;
+  
+  &__badge {
+    font-size: 12px;
+    line-height: 16px;
+    display: block;
+    text-align: center;
+    padding-top: 50px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 80px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 100px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 36px;
+    display: block;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 0;
+
+    @media (min-width: @tablet-width) {
+      font-size: 42px;
+      line-height: 64px;
+    }    
+  }
+
+  &__product {
+    padding-top: 20px;
+    padding-bottom: 44px;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 90px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      padding-top: 40px;
+      padding-bottom: 120px;
+    }
+  }
+}
