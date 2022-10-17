@@ -12,8 +12,6 @@ import svgstore from 'gulp-svgstore';
 import rename from 'gulp-rename';
 import {deleteAsync} from "del"
 
-// Styles
-
 const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
@@ -25,23 +23,17 @@ const styles = () => {
     .pipe(browser.stream());
 }
 
-// HTML
-
 const html = () => {
   return gulp.src('source/index.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'));
 }
 
-// Script
-
 const script = () => {
   return gulp.src('source/js/*.js')
    .pipe(terser())
    .pipe(gulp.dest('build/js'));
 }
-
-//Images
 
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
@@ -54,8 +46,6 @@ const copyImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-//WebP
-
 const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh({
@@ -63,8 +53,6 @@ const createWebp = () => {
     }))
     .pipe(gulp.dest('build/img'))
 }
-
-//Svg
 
 const svg = () => {
   return gulp.src('source/img/**/*.svg', 'source/img/logo/*.svg', !'source/img/sprite-svg/*.svg')
@@ -82,8 +70,6 @@ const sprite = () => {
     .pipe(gulp.dest('build/img'));
 }
 
-//Fonts
-
 const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
@@ -95,20 +81,14 @@ const copy = (done) => {
   done();
 }
 
-//Clean
-
 const clean = () => {
   return deleteAsync('build');
 };
-
-//Reload
 
 const reload = (done) => {
   browser.reload();
   done();
 }
-
-// Server
 
 const server = (done) => {
   browser.init({
@@ -122,16 +102,11 @@ const server = (done) => {
   done();
 }
 
-// Watcher
-
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(script));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
-
-
-//Build
 
 export const build = gulp.series(
   clean,
