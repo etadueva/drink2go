@@ -6,6 +6,21 @@
     margin: 0;
     padding: 0;
   }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+
+    &__buttons {
+      grid-column: 1/-1;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
 };
 
 .form-filters__item:not(:last-child) {

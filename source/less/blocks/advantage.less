@@ -19,7 +19,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 52px 1fr;
     margin-bottom: 0;
 
     &__title {
@@ -38,6 +39,7 @@
   @media (min-width: @desktop-width) {
     flex-direction: column;
     text-align: center;
+    display: flex;
 
     &__icon {
       display: block;
